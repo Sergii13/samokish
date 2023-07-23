@@ -1,0 +1,87 @@
+.shop {
+  padding: 45px 0 140px;
+  @media (max-width: $tablet) {
+    padding-bottom: 40px;
+  }
+
+  &__container {
+    max-width: 1630px;
+  }
+
+  &__filter {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 104px;
+    @media (max-width: $pc) {
+      gap: 60px 30px;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    }
+
+  }
+
+  &__card {
+  }
+}
+
+.shop-card {
+  @media (hover: hover) {
+    &:hover {
+      .shop-card__image-ibg {
+        &::after {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+
+
+  &__image-ibg {
+    padding-bottom: percent(632, 471);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      background-color: #e9c4c7;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    padding-top: 17px;
+  }
+
+  &__subtitle {
+    color: #959699;
+    line-height: 27px;
+    text-transform: uppercase;
+    letter-spacing: 0.16px;
+  }
+
+  &__title {
+    color: #565656;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.2px;
+  }
+
+  &__price {
+    color: #565656;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.18px;
+  }
+}

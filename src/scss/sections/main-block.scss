@@ -1,0 +1,47 @@
+.main-block {
+  position: relative;
+  height: 100%;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 0;
+  min-height: 70vh;
+
+  &__image-ibg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      object-position: center top;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 155px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+    }
+  }
+
+  &__container {
+
+  }
+
+  &__button {
+    position: relative;
+    z-index: 3;
+    width: 257px;
+  }
+}
+
+.button {
+  &_border {
+  }
+}

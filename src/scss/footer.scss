@@ -1,0 +1,158 @@
+.footer {
+  background-color: #e9c4c7;
+  position: relative;
+  z-index: 2;
+
+  &__container {
+    max-width: 1767px;
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 21px 0 29px;
+    position: relative;
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @media (max-width: 700px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &::after {
+      content: '';
+      left: -50vw;
+      width: 200vw;
+      bottom: 0;
+      position: absolute;
+      height: 1px;
+      background: #ffffff;
+    }
+  }
+
+  &__left {
+    max-width: 326px;
+    @media (max-width: $tablet) {
+
+      order: 2;
+
+    }
+  }
+
+  &__descr {
+    margin-bottom: 11px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.24px;
+  }
+
+  &__form {
+    position: relative;
+
+    .input {
+      padding-right: 35px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+
+    img {
+      max-width: 14px
+    }
+  }
+
+  &__center {
+    text-align: center;
+    @media (max-width: $tablet) {
+      order: -1;
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    a {
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5); /* Style for "Elipse 1 c" */
+      width: 35px;
+      height: 34px;
+      background-color: #ffe2e4;
+      border-radius: 50%;
+      display: inline-flex;
+      padding: 7px;
+      opacity: 0.77;
+      @media (hover: hover) {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__link {
+  }
+
+  &__right {
+    display: flex;
+    gap: 112px;
+    justify-content: flex-end;
+    text-align: left;
+    @media (max-width: 1440px) {
+      gap: 30px;
+    }
+    @media (max-width: $tablet) {
+      order: 1;
+    }
+    @media (max-width: 700px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list {
+    a {
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: 0.14px;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+
+      @media (hover: hover) {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__copy {
+    text-align: center;
+    padding: 14px 0 11px;
+    opacity: 0.8;
+    color: #959699;
+    font-size: 12px;
+    line-height: 27px;
+  }
+}
+

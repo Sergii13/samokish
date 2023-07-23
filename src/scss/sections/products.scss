@@ -1,0 +1,157 @@
+.products {
+  padding: 114px 0;
+  @media (max-width: $mobile) {
+    padding: 40px 0;
+  }
+
+  &__container {
+    max-width: 1630px;
+  }
+
+  &__title {
+    color: #565656;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27px;
+    text-transform: uppercase;
+    letter-spacing: 0.24px;
+
+    &:not(:last-child) {
+      margin-bottom: 48px;
+      @media (max-width: $mobile) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__slider {
+    &.swiper {
+      padding: 0 40px;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    gap: 3px;
+    @media (max-width: $mobile) {
+      margin-top: 30px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #c9c5c5;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      cursor: pointer;
+      @media (hover: hover) {
+        &:hover {
+          background-color: #565656;
+        }
+      }
+
+      &.swiper-pagination-bullet-active {
+        background-color: #565656;
+      }
+    }
+  }
+
+  &__arrows {
+    position: absolute;
+    top: 184px;
+    z-index: 2;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    left: 0;
+    @media (max-width: 700px) {
+      top: 30%;
+    }
+    @media (max-width: 550px) {
+      top: 40%;
+    }
+  }
+
+  &__arrow {
+    pointer-events: all;
+    width: 30px;
+    height: 40px;
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .prev {
+    }
+
+    &.next {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+
+.products-card {
+  @media (hover: hover) {
+    &:hover {
+      .products-card__image-ibg {
+        &::after {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+
+
+  &__image-ibg {
+    padding-bottom: percent(364, 333);
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 2;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      background-color: #e9c4c7;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  &__subtitle {
+    color: #959699;
+    line-height: 22px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.16px;
+  }
+
+  &__title {
+    color: #565656;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.2px;
+  }
+
+  &__price {
+    color: #565656;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+}
+
