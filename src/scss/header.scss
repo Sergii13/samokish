@@ -2,7 +2,7 @@
   padding: 20px 0;
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 4;
   left: 0;
   width: 100%;
   background: #fff;
@@ -202,7 +202,7 @@
   padding: 140px 16px 70px;
   gap: 40px;
   overflow-y: auto;
-  z-index: 3;
+  z-index: 2;
 
   .menu-open & {
     transform: translateY(0);
